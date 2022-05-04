@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rolês em Sampa</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página inicial</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo">Rolês em Sampa</h1>
+            <img src="../images/logo.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="pesquisa-agenda">
+
+        <form class="form-agenda" action="/action_page.php">
+            <label for="fname">Pesquisar eventos:</label> <br>
+            <input type="text" id="fname" name="fname" size="30"><br><br>
+            <input class="input-agenda" type="submit" value="Procurar">
+        </form>
+
+    </div>>
+
+
+
+
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="../images/slide-1.jpg" style="width:100%">
+            <div class="text">Rave</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="../images/slide-2.jpg" style="width:100%">
+            <div class="text">Country</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="../images/slide-3.jpg" style="width:100%">
+            <div class="text">Rock/Metal</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <br><br><br><br>
+
+    <div class="content">
+        <div class="container">
+            <div class="card-list">
+                <div class="card">
+                    <div class="imagem">
+                        <img src="../images/espaço1.jpeg" alt="">
+                    </div>
+                    <div class="texto">
+                        <p>Essa casa possui uma área externa com piscina com cascata, chuveirinho e muito espaço para
+                            mesas e cadeiras. Também contém uma área com churrasqueira e geladeira para bebidas ;).
+                            <br><br>
+                            O espaço estará com aluguel disponível do dia 02/12 até o dia 06/01 do ano que vem.
+                            <br><br>
+                            Valor da diária: <span style="color: rgb(28, 48, 138); font-weight: bold;">$2000,00</span> (Possivel negociação do valor, contatar o número 11-xxxx-xxxxx)
+                            <br><br>
+                            ATENÇÃO: Aluguel efetuado apenas para maiores de idade e com comprovante de renda.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imagem">
+                        <img src="../images/espaço2.jpeg" alt="">
+                    </div>
+                    <div class="texto">
+                        <p>Nosso espaço fica localizado á apenas 100 metros da praia. Com uma linda vista para o por do sol, nosso espaço contém uma piscina grande e um ofurô com água aquecida e hidromassagem. Este espaço é próprio para festas, contendo dois banheiros com chuveiro incluso, espaço com churrasqueira e geladeira inclusa.
+                            <br><br>
+                            O espaço estará com aluguel disponível do dia 09/12 até o dia 29/12.
+                            <br><br>
+                            Valor da diária: <span style="color: rgb(28, 48, 138); font-weight: bold;">$2700,00</span> (Desconto de 10% para aluguel de mais de 7 dias.)
+                            <br><br>
+                            ATENÇÃO: Aluguel efetuado apenas para maiores de idade e com comprovante de renda.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imagem">
+                        <img src="../images/espaço3.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <p>Nossa casa de festa conta com um salão de festas com lotação para 150 pessoas e uma área de bar com equipamentos para barmen inclusos. Também incluimos uma área com gramado e lindas árvores ( espaço próprio para seu casamento :) ). Temos parceria com uma equipe de decoração e animadores para festas de aníversario, casamento e outros. E tudo isso fica a apenas 1km da praia da região!
+                            <br><br>
+                            O espaço estará com aluguel disponível do dia 01/06 até o dia 31/06.
+                            <br><br>
+                            Valor da reserva: <span style="color: rgb(28, 48, 138); font-weight: bold;">$3000,00</span> <span style="color: rgb(175, 25, 25);">(Valor para a ativação dos nossos parceiros é cobrado a parte do aluguel)</span>
+                            <br><br>
+                            ATENÇÃO: Aluguel efetuado apenas para maiores de idade e com comprovante de renda.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+
+</body>
+
+</html>
